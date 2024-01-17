@@ -64,9 +64,10 @@ function App() {
     setPopupVisible(false);
   };
 
-  /* Translate the highlighted text via LibreTranslate API on localhost. Any other
-  translation services (Google Translate, DeepL, etc.) can also be used. Just make sure
-  to update the following accordingly. */
+  /* Translate the highlighted text via LibreTranslate API on localhost (for Google
+  Translate API, see the commented section below). Any other translation services (like
+  DeepL, Bing Translator, etc.) can also be used. Just make sure to update the following
+  accordingly. */
   const translateText = async (text) => {
     try {
       setTranslatedText('');
@@ -88,6 +89,32 @@ function App() {
       setTranslatedText('Translation Error');
     }
   };
+
+  /* Translate the highlighted text via Google Translate API. You need to get an API Key
+  and add it to .env file in the root directory (see .env.example in the root directory)
+  */
+  /* const translateText = async (text) => {
+    try {
+      setTranslatedText('');
+      let params = {
+        q: text,
+        target: "en",
+        api_url: process.env.REACT_APP_GOOGLE_TRANSLATE_API_URL,
+        api_key: process.env.REACT_APP_GOOGLE_TRANSLATE_API_KEY
+      };
+
+      const response = await fetch(
+        `${params.api_url}?key=${params.api_key}&q=${params.q}&target=${params.target}`
+      );
+
+      const result = await response.json();
+      const resTranslatedText = result.data.translations[0].translatedText;
+      setTranslatedText(resTranslatedText);
+    } catch (error) {
+      console.error('Error translating text:', error);
+      setTranslatedText('Translation Error');
+    }
+  }; */
 
   return (
     <div className="App">
