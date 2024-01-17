@@ -11,7 +11,7 @@
 
 ### Highlight Translation
 <p align="justify">
-    To translate a highlighted section, I used two different services: first, I used the <a href="https://github.com/LibreTranslate/LibreTranslate">LibreTranslate API</a> which is a free and open source machine translation API, entirely self-hosted. Fot this, you need to install LibreTranslate API on your local machine. Another service is <a href="https://cloud.google.com/translate/docs/reference/rest/v2/translate">Google Translate API</a>, for which you need to get an API key.
+    To translate a highlighted section, I used two different services: first, I used the <a href="https://github.com/LibreTranslate/LibreTranslate">LibreTranslate API</a> which is a free and open source machine translation API, entirely self-hosted. For this, you need to install LibreTranslate API on your local machine. Another service is <a href="https://cloud.google.com/translate/docs/reference/rest/v2/translate">Google Translate API</a>, for which you need to get an API key.
     <br><br>
     Alternatively, you can make API calls to the LibreTranslate API hosted on <a href="https://libretranslate.com/">their website</a> by getting <a href="https://portal.libretranslate.com/">their API key</a>, or use one of the <a href="https://github.com/LibreTranslate/LibreTranslate?tab=readme-ov-file#mirrors">public LibreTranslate mirrors</a>. Additionally, you can use any third-party translation services (like DeepL, Bing Translator, etc.). Just make sure to update API call in '<a href=src/App.js>App.js</a>' accordingly.
 </p>
@@ -21,8 +21,12 @@
 </p>
 
 ## How to Run
+
 ### Prerequisites
-Ensure that `Node.js` and `npm` are installed on your machine. If you want to use LibreTranslate API, install it as well. Otherwise, get an API key for Google Translate API.
+<p align="justify">
+    Ensure that `Node.js` and `npm` are installed on your machine. If you want to use LibreTranslate API, install it as well. Otherwise, get an API key for Google Translate API.
+</p>
+
 ### Run
 ```
 git clone https://github.com/amrznik/german-reading-app.git
